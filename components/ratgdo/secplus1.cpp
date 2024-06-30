@@ -52,7 +52,7 @@ namespace ratgdo {
             this->door_state = DoorState::UNKNOWN;
             this->light_state = LightState::UNKNOWN;
             this->scheduler_->cancel_timeout(this->ratgdo_, "wall_panel_emulation");
-            this->wall_panel_emulation();
+            //this->wall_panel_emulation();
 
             this->scheduler_->set_timeout(this->ratgdo_, "", 45000, [=] {
                 if (this->door_state == DoorState::UNKNOWN) {
